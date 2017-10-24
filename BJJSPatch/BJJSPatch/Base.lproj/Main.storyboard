@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lq-fO-Rqh">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lq-fO-Rqh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcf-BY-usu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="137"/>
+            <point key="canvasLocation" x="-921" y="137"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -37,30 +37,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOa-nE-L6N">
-                                <rect key="frame" x="107" y="261" width="161" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOa-nE-L6N">
+                                <rect key="frame" x="156" y="229.5" width="63.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXA-48-oVb">
-                                <rect key="frame" x="164" y="433" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXA-48-oVb">
+                                <rect key="frame" x="105" y="318.5" width="164" height="30"/>
+                                <state key="normal" title="跳转方法由JSPatch实现"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgT-J5-T85">
+                                <rect key="frame" x="117" y="460" width="141" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="跳转到webView"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mOa-nE-L6N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4T2-7t-hEO"/>
+                            <constraint firstItem="JXA-48-oVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C60-6D-sQk"/>
+                            <constraint firstItem="JXA-48-oVb" firstAttribute="top" secondItem="mOa-nE-L6N" secondAttribute="bottom" constant="57.5" id="ItT-9K-fmR"/>
+                            <constraint firstItem="JXA-48-oVb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NHS-ih-wMw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ozu-Nq-ZAk"/>
                     <connections>
                         <outlet property="bjLabel" destination="mOa-nE-L6N" id="9Qn-ZX-fj7"/>
                         <outlet property="jpushBtn" destination="JXA-48-oVb" id="3Pc-ks-d6r"/>
+                        <outlet property="webBtn" destination="UgT-J5-T85" id="HA6-De-OIp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="138"/>
+            <point key="canvasLocation" x="-135.19999999999999" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>
