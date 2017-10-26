@@ -52,6 +52,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="跳转到webView"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-3u-x7g">
+                                <rect key="frame" x="53" y="545" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="WebViewJavascriptBridge"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,6 +69,7 @@
                     <navigationItem key="navigationItem" id="ozu-Nq-ZAk"/>
                     <connections>
                         <outlet property="bjLabel" destination="mOa-nE-L6N" id="9Qn-ZX-fj7"/>
+                        <outlet property="bridgeBtn" destination="PvF-3u-x7g" id="499-TO-jeK"/>
                         <outlet property="jpushBtn" destination="JXA-48-oVb" id="3Pc-ks-d6r"/>
                         <outlet property="webBtn" destination="UgT-J5-T85" id="HA6-De-OIp"/>
                     </connections>

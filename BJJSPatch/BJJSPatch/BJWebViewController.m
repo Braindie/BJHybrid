@@ -45,7 +45,7 @@
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"myWebView"
+    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"test"
                                                           ofType:@"html"];
     NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
                                                     encoding:NSUTF8StringEncoding
