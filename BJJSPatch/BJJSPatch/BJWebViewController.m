@@ -43,18 +43,18 @@
     [self.view addSubview:_myWebView];
     
     
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"test"
-                                                          ofType:@"html"];
-    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
-                                                    encoding:NSUTF8StringEncoding
-                                                       error:nil];
-    [_myWebView loadHTMLString:htmlCont baseURL:baseURL];
+//    NSString *path = [[NSBundle mainBundle] bundlePath];
+//    NSURL *baseURL = [NSURL fileURLWithPath:path];
+//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"myWebView"
+//                                                          ofType:@"html"];
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+//                                                    encoding:NSUTF8StringEncoding
+//                                                       error:nil];
+//    [_myWebView loadHTMLString:htmlCont baseURL:baseURL];
     
     
-//    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://219.238.39.116:8901/wallet/#/entryLink/"]];
-//    [_myWebView loadRequest:request];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://47.95.116.109:8080/"]];
+    [_myWebView loadRequest:request];
     
     
     
@@ -71,12 +71,12 @@
 
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.jsContext[@"WTK"] = self;
-    self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *ex){
-        context.exception = ex;
-        NSLog(@"异常信息%@",ex);
-    };
+//    self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+//    self.jsContext[@"WTK"] = self;
+//    self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *ex){
+//        context.exception = ex;
+//        NSLog(@"异常信息%@",ex);
+//    };
 }
 
 #pragma mark - JSObjDelegate

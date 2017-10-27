@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <JSPatchPlatform/JSPatch.h>
+#import "BJURLProtocol.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +30,8 @@
     
     [JSPatch setupDevelopment];
     [JSPatch sync];
+    
+    [NSURLProtocol registerClass:[BJURLProtocol class]];
     
     
     
