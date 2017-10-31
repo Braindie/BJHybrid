@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcf-BY-usu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-921" y="137"/>
+            <point key="canvasLocation" x="-1407" y="135"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -50,12 +50,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgT-J5-T85">
                                 <rect key="frame" x="117" y="460" width="141" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="跳转到webView"/>
+                                <state key="normal" title="JavaScriptCore"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-3u-x7g">
                                 <rect key="frame" x="53" y="545" width="269" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="WebViewJavascriptBridge"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-rh-sNe">
+                                <rect key="frame" x="117" y="384" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NSURLProtocol"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,12 +76,13 @@
                         <outlet property="bjLabel" destination="mOa-nE-L6N" id="9Qn-ZX-fj7"/>
                         <outlet property="bridgeBtn" destination="PvF-3u-x7g" id="499-TO-jeK"/>
                         <outlet property="jpushBtn" destination="JXA-48-oVb" id="3Pc-ks-d6r"/>
+                        <outlet property="protocolBtn" destination="OpG-rh-sNe" id="5wj-fD-TGy"/>
                         <outlet property="webBtn" destination="UgT-J5-T85" id="HA6-De-OIp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135.19999999999999" y="135.38230884557723"/>
+            <point key="canvasLocation" x="-690" y="134"/>
         </scene>
     </scenes>
 </document>

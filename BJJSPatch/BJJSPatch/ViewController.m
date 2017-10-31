@@ -9,12 +9,14 @@
 #import "ViewController.h"
 #import "BJWebViewController.h"
 #import "WebViewJavascriptBridgeViewController.h"
+#import "BJWVViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *bjLabel;
 @property (weak, nonatomic) IBOutlet UIButton *jpushBtn;
 @property (weak, nonatomic) IBOutlet UIButton *webBtn;
 @property (weak, nonatomic) IBOutlet UIButton *bridgeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *protocolBtn;
 
 @end
 
@@ -31,6 +33,8 @@
     [self.webBtn addTarget:self action:@selector(webBtn:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.bridgeBtn addTarget:self action:@selector(bridgeBtn:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.protocolBtn addTarget:self action:@selector(protocalBtn:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
@@ -50,6 +54,13 @@
 - (void)bridgeBtn:(id)sender{
     
     WebViewJavascriptBridgeViewController *vc = [[WebViewJavascriptBridgeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+//跳转到下一个界面
+- (void)protocalBtn:(id)sender{
+    
+    BJWVViewController *vc = [[BJWVViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

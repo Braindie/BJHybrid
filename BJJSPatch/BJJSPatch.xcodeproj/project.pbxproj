@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		81D25CEA9A8116EEC8B143E8 /* libPods-BJJSPatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07ECB381C1007CECFD75A6A /* libPods-BJJSPatch.a */; };
-		E50956F41F9F2BCA00B4FC0A /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E50956F31F9F2BCA00B4FC0A /* myWebView.html */; };
-		E50956F71F9F2E7000B4FC0A /* BJjsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E50956F61F9F2E7000B4FC0A /* BJjsContext.m */; };
-		E51878E31FA3343C0044AC1B /* ksrz_chenggong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51878E21FA3343C0044AC1B /* ksrz_chenggong@2x.png */; };
-		E52B43D81FA02E3D008F1A1E /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = E52B43D71FA02E3D008F1A1E /* test.html */; };
-		E52B43DB1FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B43DA1FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.m */; };
-		E54CCE371FA17BCC00EF9825 /* testOC.html in Resources */ = {isa = PBXBuildFile; fileRef = E54CCE361FA17BCC00EF9825 /* testOC.html */; };
-		E54CCE391FA1CD8500EF9825 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = E54CCE381FA1CD8500EF9825 /* ExampleApp.html */; };
+		E520FA5B1FA44ECA008E8583 /* BJjsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA4E1FA44ECA008E8583 /* BJjsContext.m */; };
+		E520FA5D1FA44ECA008E8583 /* BJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA521FA44ECA008E8583 /* BJWebViewController.m */; };
+		E520FA5E1FA44ECA008E8583 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA551FA44ECA008E8583 /* ExampleApp.html */; };
+		E520FA5F1FA44ECA008E8583 /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA561FA44ECA008E8583 /* myWebView.html */; };
+		E520FA601FA44ECA008E8583 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA571FA44ECA008E8583 /* test.html */; };
+		E520FA611FA44ECA008E8583 /* testOC.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA581FA44ECA008E8583 /* testOC.html */; };
+		E520FA621FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA5A1FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m */; };
+		E520FA661FA4501D008E8583 /* BJWVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA651FA4501D008E8583 /* BJWVViewController.m */; };
+		E520FA691FA45044008E8583 /* BJURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA681FA45044008E8583 /* BJURLProtocol.m */; };
 		E5A0B42F1E6E8D6400ECFFF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A0B42E1E6E8D6400ECFFF1 /* main.m */; };
 		E5A0B4321E6E8D6400ECFFF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A0B4311E6E8D6400ECFFF1 /* AppDelegate.m */; };
 		E5A0B4351E6E8D6400ECFFF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A0B4341E6E8D6400ECFFF1 /* ViewController.m */; };
@@ -24,24 +26,27 @@
 		E5A0B4451E6E8D9600ECFFF1 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A0B4441E6E8D9600ECFFF1 /* JSPatchPlatform.framework */; };
 		E5A0B44C1E6E8EB300ECFFF1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A0B44B1E6E8EB300ECFFF1 /* libz.tbd */; };
 		E5A0B44E1E6E8EEE00ECFFF1 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A0B44D1E6E8EEE00ECFFF1 /* JavaScriptCore.framework */; };
-		E5A8DB6E1FA2E3EB00949FA9 /* BJURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A8DB6D1FA2E3EB00949FA9 /* BJURLProtocol.m */; };
-		E5DB8A901F73627400520138 /* BJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DB8A8F1F73627400520138 /* BJWebViewController.m */; };
 		E5DB8A921F7362C400520138 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DB8A911F7362C400520138 /* QuickLook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A077312D58DD7AAD548D734E /* Pods-BJJSPatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.debug.xcconfig"; sourceTree = "<group>"; };
 		E07ECB381C1007CECFD75A6A /* libPods-BJJSPatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BJJSPatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E50956F31F9F2BCA00B4FC0A /* myWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myWebView.html; sourceTree = "<group>"; };
-		E50956F51F9F2E7000B4FC0A /* BJjsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJjsContext.h; sourceTree = "<group>"; };
-		E50956F61F9F2E7000B4FC0A /* BJjsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJjsContext.m; sourceTree = "<group>"; };
-		E50956F81F9F2FBB00B4FC0A /* JSObjDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjDelegate.h; sourceTree = "<group>"; };
-		E51878E21FA3343C0044AC1B /* ksrz_chenggong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ksrz_chenggong@2x.png"; sourceTree = "<group>"; };
-		E52B43D71FA02E3D008F1A1E /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		E52B43D91FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeViewController.h; sourceTree = "<group>"; };
-		E52B43DA1FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeViewController.m; sourceTree = "<group>"; };
-		E54CCE361FA17BCC00EF9825 /* testOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testOC.html; sourceTree = "<group>"; };
-		E54CCE381FA1CD8500EF9825 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
+		E520FA4D1FA44ECA008E8583 /* BJjsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJjsContext.h; sourceTree = "<group>"; };
+		E520FA4E1FA44ECA008E8583 /* BJjsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJjsContext.m; sourceTree = "<group>"; };
+		E520FA511FA44ECA008E8583 /* BJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWebViewController.h; sourceTree = "<group>"; };
+		E520FA521FA44ECA008E8583 /* BJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWebViewController.m; sourceTree = "<group>"; };
+		E520FA531FA44ECA008E8583 /* JSObjDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjDelegate.h; sourceTree = "<group>"; };
+		E520FA551FA44ECA008E8583 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
+		E520FA561FA44ECA008E8583 /* myWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myWebView.html; sourceTree = "<group>"; };
+		E520FA571FA44ECA008E8583 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		E520FA581FA44ECA008E8583 /* testOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testOC.html; sourceTree = "<group>"; };
+		E520FA591FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeViewController.h; sourceTree = "<group>"; };
+		E520FA5A1FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeViewController.m; sourceTree = "<group>"; };
+		E520FA641FA4501D008E8583 /* BJWVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWVViewController.h; sourceTree = "<group>"; };
+		E520FA651FA4501D008E8583 /* BJWVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWVViewController.m; sourceTree = "<group>"; };
+		E520FA671FA45044008E8583 /* BJURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJURLProtocol.h; sourceTree = "<group>"; };
+		E520FA681FA45044008E8583 /* BJURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJURLProtocol.m; sourceTree = "<group>"; };
 		E5A0B42A1E6E8D6400ECFFF1 /* BJJSPatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJJSPatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A0B42E1E6E8D6400ECFFF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5A0B4301E6E8D6400ECFFF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,10 +60,6 @@
 		E5A0B4441E6E8D9600ECFFF1 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		E5A0B44B1E6E8EB300ECFFF1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E5A0B44D1E6E8EEE00ECFFF1 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		E5A8DB6C1FA2E3EB00949FA9 /* BJURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJURLProtocol.h; sourceTree = "<group>"; };
-		E5A8DB6D1FA2E3EB00949FA9 /* BJURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJURLProtocol.m; sourceTree = "<group>"; };
-		E5DB8A8E1F73627400520138 /* BJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWebViewController.h; sourceTree = "<group>"; };
-		E5DB8A8F1F73627400520138 /* BJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWebViewController.m; sourceTree = "<group>"; };
 		E5DB8A911F7362C400520138 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		FF114C2E6AFC469333AF0C63 /* Pods-BJJSPatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +89,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E520FA4C1FA44ECA008E8583 /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				E520FA4D1FA44ECA008E8583 /* BJjsContext.h */,
+				E520FA4E1FA44ECA008E8583 /* BJjsContext.m */,
+				E520FA511FA44ECA008E8583 /* BJWebViewController.h */,
+				E520FA521FA44ECA008E8583 /* BJWebViewController.m */,
+				E520FA531FA44ECA008E8583 /* JSObjDelegate.h */,
+			);
+			path = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		E520FA541FA44ECA008E8583 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				E520FA551FA44ECA008E8583 /* ExampleApp.html */,
+				E520FA561FA44ECA008E8583 /* myWebView.html */,
+				E520FA571FA44ECA008E8583 /* test.html */,
+				E520FA581FA44ECA008E8583 /* testOC.html */,
+				E520FA591FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.h */,
+				E520FA5A1FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		E520FA631FA44FF2008E8583 /* NSURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				E520FA671FA45044008E8583 /* BJURLProtocol.h */,
+				E520FA681FA45044008E8583 /* BJURLProtocol.m */,
+				E520FA641FA4501D008E8583 /* BJWVViewController.h */,
+				E520FA651FA4501D008E8583 /* BJWVViewController.m */,
+			);
+			path = NSURLProtocol;
+			sourceTree = "<group>";
+		};
 		E5A0B4211E6E8D6400ECFFF1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,28 +146,17 @@
 		E5A0B42C1E6E8D6400ECFFF1 /* BJJSPatch */ = {
 			isa = PBXGroup;
 			children = (
-				E54CCE381FA1CD8500EF9825 /* ExampleApp.html */,
+				E520FA631FA44FF2008E8583 /* NSURLProtocol */,
+				E520FA4C1FA44ECA008E8583 /* JavaScriptCore */,
+				E520FA541FA44ECA008E8583 /* WebViewJavascriptBridge */,
 				E5A0B4301E6E8D6400ECFFF1 /* AppDelegate.h */,
 				E5A0B4311E6E8D6400ECFFF1 /* AppDelegate.m */,
 				E5A0B4331E6E8D6400ECFFF1 /* ViewController.h */,
 				E5A0B4341E6E8D6400ECFFF1 /* ViewController.m */,
-				E52B43D91FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.h */,
-				E52B43DA1FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.m */,
-				E5DB8A8E1F73627400520138 /* BJWebViewController.h */,
-				E5DB8A8F1F73627400520138 /* BJWebViewController.m */,
-				E5A8DB6C1FA2E3EB00949FA9 /* BJURLProtocol.h */,
-				E5A8DB6D1FA2E3EB00949FA9 /* BJURLProtocol.m */,
-				E50956F81F9F2FBB00B4FC0A /* JSObjDelegate.h */,
-				E50956F51F9F2E7000B4FC0A /* BJjsContext.h */,
-				E50956F61F9F2E7000B4FC0A /* BJjsContext.m */,
 				E5A0B4361E6E8D6400ECFFF1 /* Main.storyboard */,
 				E5A0B4391E6E8D6400ECFFF1 /* Assets.xcassets */,
 				E5A0B43B1E6E8D6400ECFFF1 /* LaunchScreen.storyboard */,
 				E5A0B43E1E6E8D6400ECFFF1 /* Info.plist */,
-				E51878E21FA3343C0044AC1B /* ksrz_chenggong@2x.png */,
-				E54CCE361FA17BCC00EF9825 /* testOC.html */,
-				E52B43D71FA02E3D008F1A1E /* test.html */,
-				E50956F31F9F2BCA00B4FC0A /* myWebView.html */,
 				E5A0B42D1E6E8D6400ECFFF1 /* Supporting Files */,
 			);
 			path = BJJSPatch;
@@ -218,14 +244,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E50956F41F9F2BCA00B4FC0A /* myWebView.html in Resources */,
-				E54CCE371FA17BCC00EF9825 /* testOC.html in Resources */,
 				E5A0B43D1E6E8D6400ECFFF1 /* LaunchScreen.storyboard in Resources */,
-				E51878E31FA3343C0044AC1B /* ksrz_chenggong@2x.png in Resources */,
+				E520FA611FA44ECA008E8583 /* testOC.html in Resources */,
 				E5A0B43A1E6E8D6400ECFFF1 /* Assets.xcassets in Resources */,
-				E52B43D81FA02E3D008F1A1E /* test.html in Resources */,
+				E520FA601FA44ECA008E8583 /* test.html in Resources */,
+				E520FA5F1FA44ECA008E8583 /* myWebView.html in Resources */,
 				E5A0B4381E6E8D6400ECFFF1 /* Main.storyboard in Resources */,
-				E54CCE391FA1CD8500EF9825 /* ExampleApp.html in Resources */,
+				E520FA5E1FA44ECA008E8583 /* ExampleApp.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,13 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E520FA621FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m in Sources */,
 				E5A0B4351E6E8D6400ECFFF1 /* ViewController.m in Sources */,
-				E5A8DB6E1FA2E3EB00949FA9 /* BJURLProtocol.m in Sources */,
-				E5DB8A901F73627400520138 /* BJWebViewController.m in Sources */,
-				E52B43DB1FA06F5C008F1A1E /* WebViewJavascriptBridgeViewController.m in Sources */,
 				E5A0B4321E6E8D6400ECFFF1 /* AppDelegate.m in Sources */,
+				E520FA691FA45044008E8583 /* BJURLProtocol.m in Sources */,
+				E520FA5B1FA44ECA008E8583 /* BJjsContext.m in Sources */,
 				E5A0B42F1E6E8D6400ECFFF1 /* main.m in Sources */,
-				E50956F71F9F2E7000B4FC0A /* BJjsContext.m in Sources */,
+				E520FA5D1FA44ECA008E8583 /* BJWebViewController.m in Sources */,
+				E520FA661FA4501D008E8583 /* BJWVViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
