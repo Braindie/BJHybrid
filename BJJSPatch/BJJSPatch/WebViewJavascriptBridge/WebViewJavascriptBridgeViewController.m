@@ -9,15 +9,11 @@
 #import "WebViewJavascriptBridgeViewController.h"
 #import "WebViewJavascriptBridge.h"//最新版>=6.0，之前导入的是5.0结果没反应，坑了大把时间，擦
 
-@interface WebViewJavascriptBridgeViewController ()
+@interface WebViewJavascriptBridgeViewController ()<UIWebViewDelegate>
 /**
  *   bridge
  */
 @property WebViewJavascriptBridge* bridge;
-/**
- *   webView
- */
-//@property (nonatomic, strong) UIWebView *myWebView;
 @end
 
 @implementation WebViewJavascriptBridgeViewController
@@ -31,6 +27,7 @@
 
     
     UIWebView * webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    webView.delegate = self;
     [self.view addSubview:webView];
     
     //初始化  WebViewJavascriptBridge
@@ -40,15 +37,35 @@
     [_bridge setWebViewDelegate:self];
     
     [self loadHTMLPage:webView];
+
+
+    
+
     /* 关键代码 */
     //注册处理：注册完后JS如果有请求，Block块内就会有反应（Handler必须与JS中的保持一致，之前搞反了，坑了大把时间，擦）
-    [self.bridge registerHandler:@"registerAction" handler:^(id data, WVJBResponseCallback responseCallback) {
+//    registerAction
+//    submitFromWeb
+    [self.bridge registerHandler:@"submitFromWeb" handler:^(id data, WVJBResponseCallback responseCallback) {
         //log居然没反应，这里好像要用JS的语法
         NSLog(@"%@",data);
         [self logString:data];
-        
+
         // responseCallback 给后台的回复
         responseCallback(@"这是OC大哥给我赋的值");
+    }];
+    
+    
+    
+    NSString *json = nil;
+    NSDictionary *dictionary = @{@"amount":@"12.5",@"md5key":@"fasdjf32kdfkslskkj",@"mid":@"111",@"orderId":@"201711031626",@"token":@"00fa92b4-9c5b-43e0-b5df-6709d2026cde",@"type":@"cashier"};
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:nil];
+    json =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    //    acousticInteractionInitFun
+    //    fuctionInJs
+//    acousticInteractionInitFun
+    [_bridge callHandler:@"acousticInteractionInitFun" data:json responseCallback:^(id responseData) {
+        //处理JS回调的数据responseData
+//        NSString *str = [NSString stringWithFormat:@"%@",responseData];
     }];
 }
 
@@ -67,8 +84,13 @@
      */
     
     /* 关键代码 */
-    [_bridge callHandler:@"loginAction" data:@"我被OC大哥删了。。。" responseCallback:^(id responseData) {
-        
+    
+//    NSString *json = nil;
+//    NSDictionary *dictionary = @{@"amount":@"12.5",@"md5key":@"fasdjf32kdfkslskkj",@"mid":@"111",@"orderId":@"201711031626",@"token":@"00fa92b4-9c5b-43e0-b5df-6709d2026cde",@"type":@"cashier"};
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:nil];
+//    json =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    [_bridge callHandler:@"loginAction" data:@"我是OC给JS的参数" responseCallback:^(id responseData) {
         //处理JS回调的数据responseData
         NSString *str = [NSString stringWithFormat:@"%@",responseData];
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"我是OC的提示框" message:str preferredStyle:UIAlertControllerStyleAlert];
@@ -79,10 +101,13 @@
 
 #pragma mark - 初始化方法
 - (void)loadHTMLPage:(UIWebView *)webView{
-    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"ExampleApp" ofType:@"html"];
-    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
-    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
-    [webView loadHTMLString:appHtml baseURL:baseURL];
+//    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"ExampleApp" ofType:@"html"];
+//    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
+//    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
+//    [webView loadHTMLString:appHtml baseURL:baseURL];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://219.238.39.116:8901/wallet/"]];
+    [webView loadRequest:request];
 }
 
 - (void)buildRightBtn{

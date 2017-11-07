@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lq-fO-Rqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lq-fO-Rqh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
             <objects>
                 <navigationController id="0lq-fO-Rqh" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZVM-Tl-7g6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -38,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOa-nE-L6N">
-                                <rect key="frame" x="156" y="229.5" width="63.5" height="31.5"/>
+                                <rect key="frame" x="157" y="229.5" width="61.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,19 +48,16 @@
                                 <rect key="frame" x="105" y="318.5" width="164" height="30"/>
                                 <state key="normal" title="跳转方法由JSPatch实现"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgT-J5-T85">
-                                <rect key="frame" x="117" y="460" width="141" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgT-J5-T85">
+                                <rect key="frame" x="135" y="448.5" width="105" height="30"/>
                                 <state key="normal" title="JavaScriptCore"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-3u-x7g">
-                                <rect key="frame" x="53" y="545" width="269" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-3u-x7g">
+                                <rect key="frame" x="98.5" y="538.5" width="178" height="30"/>
                                 <state key="normal" title="WebViewJavascriptBridge"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-rh-sNe">
-                                <rect key="frame" x="117" y="384" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-rh-sNe">
+                                <rect key="frame" x="134" y="368.5" width="107" height="30"/>
                                 <state key="normal" title="NSURLProtocol"/>
                             </button>
                         </subviews>
@@ -67,8 +65,14 @@
                         <constraints>
                             <constraint firstItem="mOa-nE-L6N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4T2-7t-hEO"/>
                             <constraint firstItem="JXA-48-oVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C60-6D-sQk"/>
+                            <constraint firstItem="PvF-3u-x7g" firstAttribute="top" secondItem="UgT-J5-T85" secondAttribute="bottom" constant="60" id="GdC-f5-6wX"/>
+                            <constraint firstItem="OpG-rh-sNe" firstAttribute="firstBaseline" secondItem="JXA-48-oVb" secondAttribute="baseline" constant="50" id="Ia9-PP-sWY"/>
                             <constraint firstItem="JXA-48-oVb" firstAttribute="top" secondItem="mOa-nE-L6N" secondAttribute="bottom" constant="57.5" id="ItT-9K-fmR"/>
                             <constraint firstItem="JXA-48-oVb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NHS-ih-wMw"/>
+                            <constraint firstItem="PvF-3u-x7g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V63-KF-rW9"/>
+                            <constraint firstItem="OpG-rh-sNe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eSQ-Hd-0h0"/>
+                            <constraint firstItem="UgT-J5-T85" firstAttribute="firstBaseline" secondItem="OpG-rh-sNe" secondAttribute="baseline" constant="80" id="nUc-kL-dPB"/>
+                            <constraint firstItem="UgT-J5-T85" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tzN-wf-s2y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ozu-Nq-ZAk"/>

@@ -12,7 +12,9 @@
 
 //是否处理传入的request，如果return YES则会执行接下来的startLoading
 + (BOOL)canInitWithRequest:(NSURLRequest *)request{
-    NSLog(@"%@",request.URL.absoluteString);
+    
+    
+    NSLog(@"%@",request.URL);
     
     
 //    //只处理http和https请求
