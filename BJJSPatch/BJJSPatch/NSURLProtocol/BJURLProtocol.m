@@ -24,7 +24,7 @@
 //        //看看是否已经处理过了，防止无限循环
 //        if ([NSURLProtocol propertyForKey:@"key" inRequest:request])
 //            return NO;
-//        
+//
 //        return YES;
 //    }
 //    return NO;
@@ -35,23 +35,22 @@
         return YES;
     }
     return NO;
-    
-    
+
 }
 
 
 //返回格式化好的request，可以地址重定向
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request{
-//    NSLog(@"canonicalRequestForRequest:%@",request.URL.absoluteString);
-//
-//    NSMutableURLRequest *mutableReqeust = [request mutableCopy];
-//    //截取重定向
-//    if ([request.URL.absoluteString isEqualToString:@"http://47.95.116.109:8080/"])
-//    {
-//        NSURL* url1 = [NSURL URLWithString:@"http://47.95.116.109:8080/"];
-//        mutableReqeust = [NSMutableURLRequest requestWithURL:url1];
-//    }
-//    return mutableReqeust;
+    NSLog(@"canonicalRequestForRequest:%@",request.URL.absoluteString);
+
+    NSMutableURLRequest *mutableReqeust = [request mutableCopy];
+    //截取重定向
+    if ([request.URL.absoluteString isEqualToString:@"http://47.95.116.109:8080/"])
+    {
+        NSURL* url1 = [NSURL URLWithString:@"http://47.95.116.109:8080/"];
+        mutableReqeust = [NSMutableURLRequest requestWithURL:url1];
+    }
+    return mutableReqeust;
     
     return request;
 

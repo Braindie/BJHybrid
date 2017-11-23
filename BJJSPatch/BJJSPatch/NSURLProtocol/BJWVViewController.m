@@ -26,21 +26,13 @@
     _myWebView.delegate = self;
     [self.view addSubview:_myWebView];
     
-
-    
 //    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://219.238.39.116:443/wallet/#/entryLink/"]];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://219.238.39.116:8901/wallet/"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://47.95.116.109:8080/"]];
     [_myWebView loadRequest:request];
-    
 }
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-//    NSString *path = [[NSBundle mainBundle] bundlePath];
-//    NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"vendor" ofType:@".js"];
-    NSString *str = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
-    [webView stringByEvaluatingJavaScriptFromString:str];
 
 }
 

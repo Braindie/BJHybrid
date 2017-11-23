@@ -52,16 +52,12 @@
                                                        error:nil];
     [_myWebView loadHTMLString:htmlCont baseURL:baseURL];
     
-
-    
-    
     
 //    [_myWebView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"CallBackFunction();"]];
 //    NSString *str1 = @"acousticInteractionInitFun";
 //    NSString *str2 = @"{\"mid\": \"商户号（00002020）\",\"token\": \"2019999002221111(交易token/用户token)\",\"md5key\": \"fasdjf32kdfkslskkj\",\"orderId\": \"201710231025\",\"amount\": \"12.5\",\"type\": \"cashier\"}";
 //    NSString *str = [_myWebView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"CallBackFunction('%@'，'%@');",str1,str2]];
 //    NSLog(@"js返回值:%@",str);
-
 }
 
 
