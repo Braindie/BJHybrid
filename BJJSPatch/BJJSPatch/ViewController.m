@@ -11,12 +11,13 @@
 #import "WebViewJavascriptBridgeViewController.h"
 #import "BJWVViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *bjLabel;
 @property (weak, nonatomic) IBOutlet UIButton *jpushBtn;
 @property (weak, nonatomic) IBOutlet UIButton *webBtn;
 @property (weak, nonatomic) IBOutlet UIButton *bridgeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *protocolBtn;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
@@ -27,6 +28,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self testAction];
     
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
+    
     
     [self.jpushBtn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -36,6 +40,33 @@
 
     [self.protocolBtn addTarget:self action:@selector(protocalBtn:) forControlEvents:UIControlEventTouchUpInside];
 
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+    cell.textLabel.numberOfLines = 0;
+
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"JSPatch";
+    }else if (indexPath.row == 1){
+        cell.textLabel.text = @"NSURLProtocol";
+
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"JavaScriptCore";
+
+    }else if (indexPath.row == 3){
+        cell.textLabel.text = @"WebViewJavascriptBridge";
+
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
 
 //使用JSPatch完成跳转

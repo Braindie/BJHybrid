@@ -14,27 +14,26 @@
 + (BOOL)canInitWithRequest:(NSURLRequest *)request{
     
     
-    NSLog(@"%@",request.URL);
-    
-    
-//    //只处理http和https请求
-//    NSString *scheme = [[request URL] scheme];
-//    if ( ([scheme caseInsensitiveCompare:@"http"]  == NSOrderedSame ||
-//          [scheme caseInsensitiveCompare:@"https"] == NSOrderedSame )){
-//        //看看是否已经处理过了，防止无限循环
-//        if ([NSURLProtocol propertyForKey:@"key" inRequest:request])
-//            return NO;
-//
-//        return YES;
-//    }
-//    return NO;
-    
-    
-    // 这里是html 渲染时候入口，来处理自定义标签 如 "xadsdk",若return YES 则会执行接下来的 -startLoading方法
-    if ([request.URL.scheme caseInsensitiveCompare:@"zwj"] == NSOrderedSame) {
+    NSLog(@"request.URL.absoluteString = %@",request.URL.absoluteString);
+    //只处理http和https请求
+    NSString *scheme = [[request URL] scheme];
+    if ( ([scheme caseInsensitiveCompare:@"http"]  == NSOrderedSame ||
+          [scheme caseInsensitiveCompare:@"https"] == NSOrderedSame ))
+    {
+        //看看是否已经处理过了，防止无限循环
+        if ([NSURLProtocol propertyForKey:@"filteredCssKey" inRequest:request])
+            return NO;
+        
         return YES;
     }
     return NO;
+    
+    
+//    // 这里是html 渲染时候入口，来处理自定义标签 如 "xadsdk",若return YES 则会执行接下来的 -startLoading方法
+//    if ([request.URL.scheme caseInsensitiveCompare:@"zwj"] == NSOrderedSame) {
+//        return YES;
+//    }
+//    return NO;
 
 }
 

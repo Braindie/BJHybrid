@@ -27,7 +27,7 @@
     [self.view addSubview:_myWebView];
     
 //    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://219.238.39.116:443/wallet/#/entryLink/"]];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://47.95.116.109:8080/"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://219.238.39.116:8901/wallet/"]];
     [_myWebView loadRequest:request];
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lq-fO-Rqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0lq-fO-Rqh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXA-48-oVb">
-                                <rect key="frame" x="62" y="318.5" width="250" height="30"/>
+                                <rect key="frame" x="62.5" y="318.5" width="250" height="30"/>
                                 <state key="normal" title="JSPatch（跳转方法由JSPatch实现）"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgT-J5-T85">
@@ -59,16 +59,36 @@
                                 <rect key="frame" x="134" y="398.5" width="107" height="30"/>
                                 <state key="normal" title="NSURLProtocol"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-Pv-IPw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bxV-gE-RyW"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="W4Z-IO-MS8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W4Z-IO-MS8" id="noD-bq-BP9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mOa-nE-L6N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4T2-7t-hEO"/>
+                            <constraint firstItem="sDa-Pv-IPw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="78j-pA-iiK"/>
+                            <constraint firstItem="sDa-Pv-IPw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A8g-nX-h69"/>
                             <constraint firstItem="JXA-48-oVb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C60-6D-sQk"/>
                             <constraint firstItem="PvF-3u-x7g" firstAttribute="top" secondItem="UgT-J5-T85" secondAttribute="bottom" constant="50" id="GdC-f5-6wX"/>
                             <constraint firstItem="JXA-48-oVb" firstAttribute="top" secondItem="mOa-nE-L6N" secondAttribute="bottom" constant="57.5" id="ItT-9K-fmR"/>
                             <constraint firstItem="JXA-48-oVb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NHS-ih-wMw"/>
                             <constraint firstItem="UgT-J5-T85" firstAttribute="top" secondItem="OpG-rh-sNe" secondAttribute="bottom" constant="50" id="PQe-km-chj"/>
                             <constraint firstItem="PvF-3u-x7g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V63-KF-rW9"/>
+                            <constraint firstAttribute="trailing" secondItem="sDa-Pv-IPw" secondAttribute="trailing" id="W64-tP-B3E"/>
                             <constraint firstItem="OpG-rh-sNe" firstAttribute="top" secondItem="JXA-48-oVb" secondAttribute="bottom" constant="50" id="WNM-gv-qOs"/>
                             <constraint firstItem="OpG-rh-sNe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eSQ-Hd-0h0"/>
                             <constraint firstItem="UgT-J5-T85" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tzN-wf-s2y"/>
@@ -79,13 +99,14 @@
                         <outlet property="bjLabel" destination="mOa-nE-L6N" id="9Qn-ZX-fj7"/>
                         <outlet property="bridgeBtn" destination="PvF-3u-x7g" id="499-TO-jeK"/>
                         <outlet property="jpushBtn" destination="JXA-48-oVb" id="3Pc-ks-d6r"/>
+                        <outlet property="myTableView" destination="sDa-Pv-IPw" id="a6z-au-nCK"/>
                         <outlet property="protocolBtn" destination="OpG-rh-sNe" id="5wj-fD-TGy"/>
                         <outlet property="webBtn" destination="UgT-J5-T85" id="HA6-De-OIp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="134"/>
+            <point key="canvasLocation" x="-604" y="134"/>
         </scene>
     </scenes>
 </document>
