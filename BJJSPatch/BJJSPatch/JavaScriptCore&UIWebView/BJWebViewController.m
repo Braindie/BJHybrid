@@ -32,7 +32,7 @@
     
 //    [self showQuickLook];
     
-
+    self.navigationItem.title = @"UIWebView";
     
     
     

@@ -12,11 +12,7 @@
 #import "BJWVViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UILabel *bjLabel;
-@property (weak, nonatomic) IBOutlet UIButton *jpushBtn;
-@property (weak, nonatomic) IBOutlet UIButton *webBtn;
-@property (weak, nonatomic) IBOutlet UIButton *bridgeBtn;
-@property (weak, nonatomic) IBOutlet UIButton *protocolBtn;
+
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
@@ -31,15 +27,6 @@
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     
-    
-    [self.jpushBtn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.webBtn addTarget:self action:@selector(webBtn:) forControlEvents:UIControlEventTouchUpInside];
-
-    [self.bridgeBtn addTarget:self action:@selector(bridgeBtn:) forControlEvents:UIControlEventTouchUpInside];
-
-    [self.protocolBtn addTarget:self action:@selector(protocalBtn:) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -56,11 +43,14 @@
         cell.textLabel.text = @"NSURLProtocol";
 
     }else if (indexPath.row == 2){
-        cell.textLabel.text = @"JavaScriptCore";
+        cell.textLabel.text = @"JavaScriptCore与UIWebView";
 
     }else if (indexPath.row == 3){
-        cell.textLabel.text = @"WebViewJavascriptBridge";
+        cell.textLabel.text = @"JavaScriptCore与WKWebView";
 
+    }else if (indexPath.row == 4){
+        cell.textLabel.text = @"WebViewJavascriptBridge";
+        
     }
     return cell;
 }
@@ -69,34 +59,33 @@
     return 80;
 }
 
-//使用JSPatch完成跳转
-- (void)handleBtn:(id)sender{
-    //http://www.jspatch.com/Apps/patch/id/24381
-}
 
 
-//跳转到下一个界面
-- (void)webBtn:(id)sender{
-    BJWebViewController *vc = [[BJWebViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-//跳转到下一个界面
-- (void)bridgeBtn:(id)sender{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    WebViewJavascriptBridgeViewController *vc = [[WebViewJavascriptBridgeViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 0) {
+
+    }else if (indexPath.row == 1){
+        BJWVViewController *vc = [[BJWVViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }else if (indexPath.row == 2){
+        BJWebViewController *vc = [[BJWebViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else if (indexPath.row == 3){
+
+        
+    }else if (indexPath.row == 4){
+        WebViewJavascriptBridgeViewController *vc = [[WebViewJavascriptBridgeViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
-//跳转到下一个界面
-- (void)protocalBtn:(id)sender{
-    
-    BJWVViewController *vc = [[BJWVViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (void)testAction{
-    self.bjLabel.text = @"初始值为0";
+    NSLog(@"JSPatch");
+//    self.bjLabel.text = @"初始值为0";
 }
 
 - (void)didReceiveMemoryWarning {

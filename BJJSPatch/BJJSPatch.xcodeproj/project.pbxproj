@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		81D25CEA9A8116EEC8B143E8 /* libPods-BJJSPatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07ECB381C1007CECFD75A6A /* libPods-BJJSPatch.a */; };
 		E51A3AD31FAC05440092A62C /* vendor.js in Resources */ = {isa = PBXBuildFile; fileRef = E51A3AD21FAC05440092A62C /* vendor.js */; };
-		E520FA5B1FA44ECA008E8583 /* BJjsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA4E1FA44ECA008E8583 /* BJjsContext.m */; };
-		E520FA5D1FA44ECA008E8583 /* BJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA521FA44ECA008E8583 /* BJWebViewController.m */; };
 		E520FA5E1FA44ECA008E8583 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA551FA44ECA008E8583 /* ExampleApp.html */; };
 		E520FA5F1FA44ECA008E8583 /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA561FA44ECA008E8583 /* myWebView.html */; };
 		E520FA601FA44ECA008E8583 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA571FA44ECA008E8583 /* test.html */; };
@@ -18,6 +16,8 @@
 		E520FA621FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA5A1FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m */; };
 		E520FA661FA4501D008E8583 /* BJWVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA651FA4501D008E8583 /* BJWVViewController.m */; };
 		E520FA691FA45044008E8583 /* BJURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA681FA45044008E8583 /* BJURLProtocol.m */; };
+		E55B85B621D0E5A200397B4E /* BJjsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B85B221D0E5A200397B4E /* BJjsContext.m */; };
+		E55B85B721D0E5A200397B4E /* BJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B85B421D0E5A200397B4E /* BJWebViewController.m */; };
 		E5A0B42F1E6E8D6400ECFFF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A0B42E1E6E8D6400ECFFF1 /* main.m */; };
 		E5A0B4321E6E8D6400ECFFF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A0B4311E6E8D6400ECFFF1 /* AppDelegate.m */; };
 		E5A0B4351E6E8D6400ECFFF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A0B4341E6E8D6400ECFFF1 /* ViewController.m */; };
@@ -35,11 +35,6 @@
 		A077312D58DD7AAD548D734E /* Pods-BJJSPatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.debug.xcconfig"; sourceTree = "<group>"; };
 		E07ECB381C1007CECFD75A6A /* libPods-BJJSPatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BJJSPatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51A3AD21FAC05440092A62C /* vendor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vendor.js; sourceTree = "<group>"; };
-		E520FA4D1FA44ECA008E8583 /* BJjsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJjsContext.h; sourceTree = "<group>"; };
-		E520FA4E1FA44ECA008E8583 /* BJjsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJjsContext.m; sourceTree = "<group>"; };
-		E520FA511FA44ECA008E8583 /* BJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWebViewController.h; sourceTree = "<group>"; };
-		E520FA521FA44ECA008E8583 /* BJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWebViewController.m; sourceTree = "<group>"; };
-		E520FA531FA44ECA008E8583 /* JSObjDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjDelegate.h; sourceTree = "<group>"; };
 		E520FA551FA44ECA008E8583 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		E520FA561FA44ECA008E8583 /* myWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myWebView.html; sourceTree = "<group>"; };
 		E520FA571FA44ECA008E8583 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
@@ -50,6 +45,11 @@
 		E520FA651FA4501D008E8583 /* BJWVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWVViewController.m; sourceTree = "<group>"; };
 		E520FA671FA45044008E8583 /* BJURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJURLProtocol.h; sourceTree = "<group>"; };
 		E520FA681FA45044008E8583 /* BJURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJURLProtocol.m; sourceTree = "<group>"; };
+		E55B85B121D0E5A200397B4E /* BJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWebViewController.h; sourceTree = "<group>"; };
+		E55B85B221D0E5A200397B4E /* BJjsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJjsContext.m; sourceTree = "<group>"; };
+		E55B85B321D0E5A200397B4E /* JSObjDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjDelegate.h; sourceTree = "<group>"; };
+		E55B85B421D0E5A200397B4E /* BJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWebViewController.m; sourceTree = "<group>"; };
+		E55B85B521D0E5A200397B4E /* BJjsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJjsContext.h; sourceTree = "<group>"; };
 		E5A0B42A1E6E8D6400ECFFF1 /* BJJSPatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJJSPatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A0B42E1E6E8D6400ECFFF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5A0B4301E6E8D6400ECFFF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,18 +93,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E520FA4C1FA44ECA008E8583 /* JavaScriptCore */ = {
-			isa = PBXGroup;
-			children = (
-				E520FA4D1FA44ECA008E8583 /* BJjsContext.h */,
-				E520FA4E1FA44ECA008E8583 /* BJjsContext.m */,
-				E520FA511FA44ECA008E8583 /* BJWebViewController.h */,
-				E520FA521FA44ECA008E8583 /* BJWebViewController.m */,
-				E520FA531FA44ECA008E8583 /* JSObjDelegate.h */,
-			);
-			path = JavaScriptCore;
-			sourceTree = "<group>";
-		};
 		E520FA541FA44ECA008E8583 /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +118,25 @@
 			path = NSURLProtocol;
 			sourceTree = "<group>";
 		};
+		E55B85B021D0E5A200397B4E /* JavaScriptCore&UIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E55B85B521D0E5A200397B4E /* BJjsContext.h */,
+				E55B85B221D0E5A200397B4E /* BJjsContext.m */,
+				E55B85B121D0E5A200397B4E /* BJWebViewController.h */,
+				E55B85B421D0E5A200397B4E /* BJWebViewController.m */,
+				E55B85B321D0E5A200397B4E /* JSObjDelegate.h */,
+			);
+			path = "JavaScriptCore&UIWebView";
+			sourceTree = "<group>";
+		};
+		E55B85B821D0E66D00397B4E /* JavaScriptCore&WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "JavaScriptCore&WKWebView";
+			sourceTree = "<group>";
+		};
 		E5A0B4211E6E8D6400ECFFF1 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				E520FA631FA44FF2008E8583 /* NSURLProtocol */,
-				E520FA4C1FA44ECA008E8583 /* JavaScriptCore */,
+				E55B85B021D0E5A200397B4E /* JavaScriptCore&UIWebView */,
+				E55B85B821D0E66D00397B4E /* JavaScriptCore&WKWebView */,
 				E520FA541FA44ECA008E8583 /* WebViewJavascriptBridge */,
 				E5A0B4301E6E8D6400ECFFF1 /* AppDelegate.h */,
 				E5A0B4311E6E8D6400ECFFF1 /* AppDelegate.m */,
@@ -318,12 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E520FA621FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m in Sources */,
+				E55B85B721D0E5A200397B4E /* BJWebViewController.m in Sources */,
 				E5A0B4351E6E8D6400ECFFF1 /* ViewController.m in Sources */,
 				E5A0B4321E6E8D6400ECFFF1 /* AppDelegate.m in Sources */,
+				E55B85B621D0E5A200397B4E /* BJjsContext.m in Sources */,
 				E520FA691FA45044008E8583 /* BJURLProtocol.m in Sources */,
-				E520FA5B1FA44ECA008E8583 /* BJjsContext.m in Sources */,
 				E5A0B42F1E6E8D6400ECFFF1 /* main.m in Sources */,
-				E520FA5D1FA44ECA008E8583 /* BJWebViewController.m in Sources */,
 				E520FA661FA4501D008E8583 /* BJWVViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
