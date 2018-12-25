@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BJJSPatch/WebViewJavascriptBridge/WebViewJavascriptBridgeViewController.m"
-            timestampString = "533120826.10704"
+            timestampString = "567421188.0573471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BJJSPatch/NSURLProtocol/BJURLProtocol.m"
-            timestampString = "567340135.395383"
+            filePath = "BJJSPatch/JavaScriptCore&amp;UIWebView/BJWebViewController.m"
+            timestampString = "567421188.057523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "+canInitWithRequest:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BJJSPatch/NSURLProtocol/BJURLProtocol.m"
-            timestampString = "567340135.3957"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "+canonicalRequestForRequest:"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-share:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

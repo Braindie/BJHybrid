@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		81D25CEA9A8116EEC8B143E8 /* libPods-BJJSPatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07ECB381C1007CECFD75A6A /* libPods-BJJSPatch.a */; };
+		E50F9ACA21D228F400668187 /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E50F9AC921D228F400668187 /* myWebView.html */; };
 		E51A3AD31FAC05440092A62C /* vendor.js in Resources */ = {isa = PBXBuildFile; fileRef = E51A3AD21FAC05440092A62C /* vendor.js */; };
 		E520FA5E1FA44ECA008E8583 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA551FA44ECA008E8583 /* ExampleApp.html */; };
-		E520FA5F1FA44ECA008E8583 /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA561FA44ECA008E8583 /* myWebView.html */; };
 		E520FA601FA44ECA008E8583 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA571FA44ECA008E8583 /* test.html */; };
 		E520FA611FA44ECA008E8583 /* testOC.html in Resources */ = {isa = PBXBuildFile; fileRef = E520FA581FA44ECA008E8583 /* testOC.html */; };
 		E520FA621FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E520FA5A1FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.m */; };
@@ -34,9 +34,9 @@
 /* Begin PBXFileReference section */
 		A077312D58DD7AAD548D734E /* Pods-BJJSPatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.debug.xcconfig"; sourceTree = "<group>"; };
 		E07ECB381C1007CECFD75A6A /* libPods-BJJSPatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BJJSPatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50F9AC921D228F400668187 /* myWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myWebView.html; sourceTree = "<group>"; };
 		E51A3AD21FAC05440092A62C /* vendor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vendor.js; sourceTree = "<group>"; };
 		E520FA551FA44ECA008E8583 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
-		E520FA561FA44ECA008E8583 /* myWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myWebView.html; sourceTree = "<group>"; };
 		E520FA571FA44ECA008E8583 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		E520FA581FA44ECA008E8583 /* testOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testOC.html; sourceTree = "<group>"; };
 		E520FA591FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeViewController.h; sourceTree = "<group>"; };
@@ -98,7 +98,6 @@
 			children = (
 				E5EDA9FE1FB057CF00E89C7A /* ExamApp.html */,
 				E520FA551FA44ECA008E8583 /* ExampleApp.html */,
-				E520FA561FA44ECA008E8583 /* myWebView.html */,
 				E520FA571FA44ECA008E8583 /* test.html */,
 				E520FA581FA44ECA008E8583 /* testOC.html */,
 				E520FA591FA44ECA008E8583 /* WebViewJavascriptBridgeViewController.h */,
@@ -121,6 +120,7 @@
 		E55B85B021D0E5A200397B4E /* JavaScriptCore&UIWebView */ = {
 			isa = PBXGroup;
 			children = (
+				E50F9AC921D228F400668187 /* myWebView.html */,
 				E55B85B521D0E5A200397B4E /* BJjsContext.h */,
 				E55B85B221D0E5A200397B4E /* BJjsContext.m */,
 				E55B85B121D0E5A200397B4E /* BJWebViewController.h */,
@@ -230,7 +230,7 @@
 				TargetAttributes = {
 					E5A0B4291E6E8D6400ECFFF1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = D52TEC35MW;
+						DevelopmentTeam = F79H2LLK8B;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,13 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50F9ACA21D228F400668187 /* myWebView.html in Resources */,
 				E5A0B43D1E6E8D6400ECFFF1 /* LaunchScreen.storyboard in Resources */,
 				E5EDA9FF1FB057CF00E89C7A /* ExamApp.html in Resources */,
 				E520FA611FA44ECA008E8583 /* testOC.html in Resources */,
 				E51A3AD31FAC05440092A62C /* vendor.js in Resources */,
 				E5A0B43A1E6E8D6400ECFFF1 /* Assets.xcassets in Resources */,
 				E520FA601FA44ECA008E8583 /* test.html in Resources */,
-				E520FA5F1FA44ECA008E8583 /* myWebView.html in Resources */,
 				E5A0B4381E6E8D6400ECFFF1 /* Main.storyboard in Resources */,
 				E520FA5E1FA44ECA008E8583 /* ExampleApp.html in Resources */,
 			);
@@ -451,7 +451,7 @@
 			baseConfigurationReference = A077312D58DD7AAD548D734E /* Pods-BJJSPatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D52TEC35MW;
+				DEVELOPMENT_TEAM = F79H2LLK8B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BJJSPatch",
@@ -468,7 +468,7 @@
 			baseConfigurationReference = FF114C2E6AFC469333AF0C63 /* Pods-BJJSPatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D52TEC35MW;
+				DEVELOPMENT_TEAM = F79H2LLK8B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BJJSPatch",

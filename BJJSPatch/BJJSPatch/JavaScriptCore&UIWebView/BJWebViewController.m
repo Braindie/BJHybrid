@@ -7,13 +7,12 @@
 //
 
 #import "BJWebViewController.h"
-#import <QuickLook/QuickLook.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "BJjsContext.h"
 #import "JSObjDelegate.h"
 
 
-@interface BJWebViewController ()<QLPreviewControllerDelegate,QLPreviewControllerDataSource,UIWebViewDelegate,JSObjDelegate>
+@interface BJWebViewController ()<UIWebViewDelegate,JSObjDelegate>
 /**
  *   webView
  */
@@ -21,7 +20,7 @@
 /**
  *   jiaohu
  */
-@property (nonatomic, strong) BJjsContext *jsContext;
+@property (nonatomic, strong) BJjsContext *jsContext;//一个 Context 就是一个 JavaScript 代码执行的环境，也叫作用域。
 @end
 
 @implementation BJWebViewController
@@ -30,7 +29,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self showQuickLook];
     
     self.navigationItem.title = @"UIWebView";
     
@@ -73,68 +71,79 @@
 }
 
 #pragma mark - JSObjDelegate
-//JS调用OC的方法
+//JS->OC
 - (void)callCamera{
-    NSLog(@"调用摄像头");
-    //OC调用JS方法
-    JSValue *picCallBack = self.jsContext[@"picCallback"];
-    [picCallBack callWithArguments:@[@"张文军"]];//传值
+    //回主线程
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"我是OC的提示框" message:@"我监听到了JS的召唤，我将要给他发送：你好，JS大哥" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //OC->JS
+            JSValue *picCallBack = self.jsContext[@"picCallback"];
+            [picCallBack callWithArguments:@[@"你好，JS大哥"]];//传值
+        }];
+        [actionSheet addAction:action1];
+        [self presentViewController:actionSheet animated:YES completion:nil];
+    });
+
 }
 
-//JS调用OC的方法
-- (void)share:(NSString *)shareInfo{
-    NSLog(@"shareInfo===%@",shareInfo);
-    //OC调用JS方法
-    JSValue *shareCallBack = self.jsContext[@"shareCallback"];
-    [shareCallBack callWithArguments:nil];
-}
-
+//JS->OC
 - (void)check:(NSString *)name{
     NSLog(@"js返回的name = %@",name);
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- (void)showQuickLook{
-    QLPreviewController * qlPreview = [[QLPreviewController alloc]init];
-    qlPreview.dataSource = self; //需要打开的文件的信息要实现dataSource中的方法
-    qlPreview.delegate = self;  //视图显示的控制
-    [self presentViewController:qlPreview animated:YES completion:^{
-        //需要用模态化的方式进行展示
+    
+    //不知道为啥，这个不回主线程也不会警告
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"我是OC的提示框" message:name preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }];
+    [actionSheet addAction:action1];
+    [self presentViewController:actionSheet animated:YES completion:nil];
 }
 
--(NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller{
-    return 3; //需要显示的文件的个数
-}
--(id<QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index
-{
-    //返回要打开文件的地址，包括网络或者本地的地址
-//    NSURL * url = [NSURL fileURLWithPath:@"http://cbt3.oss-cn-qingdao.aliyuncs.com/loan/700436_253069.pdf?Expires=1821234065&OSSAccessKeyId=vxvDfbmso9LsYzeK&Signature=Sk8riD3pbwTLQc4d2MkiUGq813A%3D"];
-//    NSURL * url = [NSURL fileURLWithPath:@"http://cbt3.oss-cn-qingdao.aliyuncs.com/loan/700436_253069.pdf"];
-    NSURL * url = [NSURL fileURLWithPath:@"http://www.baidu.com"];
+#pragma mark -
+//JS->OC
+- (void)share:(NSString *)shareInfo{
 
-    return url;
+    //收到JS传来的数据
+    NSLog(@"shareInfo===%@",shareInfo);
+    
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        
+        UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"我是OC的提示框" message:[NSString stringWithFormat:@"JS发来消息说：%@",shareInfo] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"回答" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //JS->OC
+            JSValue *shareCallBack = self.jsContext[@"shareCallback"];
+            [shareCallBack callWithArguments:@[@"我叫Braindie"]];
+            //JS是弱类型的，ObjectiveC是强类型的，JSValue被引入处理这种类型差异，在Objective-C 对象和 JavaScript 对象之间起转换作用
+        }];
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [actionSheet addAction:action1];
+        [actionSheet addAction:action2];
+        [self presentViewController:actionSheet animated:YES completion:nil];
+    });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

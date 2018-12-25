@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<div style="margin-top: 10px">
+	<h3 align="center">Objective-C和JavaScript交互</h3>
+</div>
+
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+
+<!-- -->
+<div align="center">
+    <!--直接调用OC方法的按钮-->
+    <input type="button" value="CallCamera" onclick="WTK.callCamera()">
+</div>
+
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+
+<!---->
+<div align="center">
+    <!--通过在JS中定义方法来调用OC方法-->
+	<input type="button" value="UIWebView与OC" onclick="callShare()">
+</div>
+
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#987cb9 SIZE=3>
+
+<!--JS调用系统相册，相机会崩溃-->
+<div align="center">
+    <input class="js_upFile cover1" type="file" name="cover"/>
+</div>
+
+<script>
+	var callShare = function() {
+        var shareInfo = JSON.stringify("你叫什么名字？");
+        alert("我是JS的提示框：我将要向OC发送消息：" + shareInfo);//JS方法中，alert按钮可以取消
+        //JS->OC
+        WTK.share(shareInfo);//"WTK"代表OC注入的对象，“share”的方法名OC要保持一致
+    }
+
+    //OC->JS
+    var shareCallback = function(string){
+        alert("我是JS的提示框：OC发来消息说：" + string);//OC调用的JS方法中，alert按钮无法取消
+    }
+
+
+
+
+    //OC->JS
+    var picCallback = function(photos) {
+        //JS->OC
+        WTK.check("OC老弟，我收到了你的消息，谢谢------"+photos);
+    }
+
+</script>
+</body>
+</html>
