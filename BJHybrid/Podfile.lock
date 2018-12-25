@@ -1,0 +1,16 @@
+PODS:
+  - WebViewJavascriptBridge (6.0.2)
+
+DEPENDENCIES:
+  - WebViewJavascriptBridge
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - WebViewJavascriptBridge
+
+SPEC CHECKSUMS:
+  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
+
+PODFILE CHECKSUM: a86c1ae1f70c9258d229087ee25fa12903b61a23
+
+COCOAPODS: 1.5.3
