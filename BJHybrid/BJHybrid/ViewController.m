@@ -10,6 +10,7 @@
 #import "BJWebViewController.h"
 #import "WebViewJavascriptBridgeViewController.h"
 #import "BJWVViewController.h"
+#import "BJWKWebViewViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -81,7 +82,10 @@
         [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 4){
+        BJWKWebViewViewController *vc = [[BJWKWebViewViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
 
+        
     }else if (indexPath.row == 5){
 
     }

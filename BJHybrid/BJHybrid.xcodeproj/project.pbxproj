@@ -26,6 +26,11 @@
 		E50F9B0121D23DE000668187 /* BJURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E50F9AEB21D23DE000668187 /* BJURLProtocol.m */; };
 		E50F9B0221D23DE000668187 /* BJWVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50F9AEC21D23DE000668187 /* BJWVViewController.m */; };
 		E50F9B0421D23E8800668187 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50F9B0321D23E8800668187 /* JSPatchPlatform.framework */; };
+		E52B056F21DC92E2002B5032 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E52B056821DC92E1002B5032 /* index.html */; };
+		E52B057021DC92E2002B5032 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = E52B056A21DC92E1002B5032 /* index.css */; };
+		E52B057121DC92E2002B5032 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = E52B056C21DC92E1002B5032 /* index.js */; };
+		E52B057221DC92E2002B5032 /* knowledge_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52B056E21DC92E1002B5032 /* knowledge_icon.png */; };
+		E52B057521DC9308002B5032 /* BJWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B057421DC9308002B5032 /* BJWKWebViewViewController.m */; };
 		E5A0B44C1E6E8EB300ECFFF1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A0B44B1E6E8EB300ECFFF1 /* libz.tbd */; };
 		E5A0B44E1E6E8EEE00ECFFF1 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A0B44D1E6E8EEE00ECFFF1 /* JavaScriptCore.framework */; };
 		E5DB8A921F7362C400520138 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DB8A911F7362C400520138 /* QuickLook.framework */; };
@@ -62,6 +67,12 @@
 		E50F9AED21D23DE000668187 /* BJURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJURLProtocol.h; sourceTree = "<group>"; };
 		E50F9AEF21D23DE000668187 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E50F9B0321D23E8800668187 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
+		E52B056821DC92E1002B5032 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		E52B056A21DC92E1002B5032 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		E52B056C21DC92E1002B5032 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		E52B056E21DC92E1002B5032 /* knowledge_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knowledge_icon.png; sourceTree = "<group>"; };
+		E52B057321DC9308002B5032 /* BJWKWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJWKWebViewViewController.h; sourceTree = "<group>"; };
+		E52B057421DC9308002B5032 /* BJWKWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJWKWebViewViewController.m; sourceTree = "<group>"; };
 		E5A0B42A1E6E8D6400ECFFF1 /* BJHybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJHybrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A0B44B1E6E8EB300ECFFF1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E5A0B44D1E6E8EEE00ECFFF1 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -121,11 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				E50F9AD121D23DE000668187 /* ExamApp.html */,
-				E50F9AD221D23DE000668187 /* WebViewJavascriptBridgeViewController.m */,
 				E50F9AD321D23DE000668187 /* ExampleApp.html */,
 				E50F9AD421D23DE000668187 /* test.html */,
-				E50F9AD521D23DE000668187 /* WebViewJavascriptBridgeViewController.h */,
 				E50F9AD621D23DE000668187 /* testOC.html */,
+				E50F9AD521D23DE000668187 /* WebViewJavascriptBridgeViewController.h */,
+				E50F9AD221D23DE000668187 /* WebViewJavascriptBridgeViewController.m */,
 			);
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
@@ -133,12 +144,12 @@
 		E50F9AD721D23DE000668187 /* JavaScriptCore&UIWebView */ = {
 			isa = PBXGroup;
 			children = (
-				E50F9AD821D23DE000668187 /* BJWebViewController.h */,
-				E50F9AD921D23DE000668187 /* BJjsContext.m */,
-				E50F9ADA21D23DE000668187 /* JSObjDelegate.h */,
 				E50F9ADB21D23DE000668187 /* myWebView.html */,
+				E50F9AD821D23DE000668187 /* BJWebViewController.h */,
 				E50F9ADC21D23DE000668187 /* BJWebViewController.m */,
 				E50F9ADD21D23DE000668187 /* BJjsContext.h */,
+				E50F9AD921D23DE000668187 /* BJjsContext.m */,
+				E50F9ADA21D23DE000668187 /* JSObjDelegate.h */,
 			);
 			path = "JavaScriptCore&UIWebView";
 			sourceTree = "<group>";
@@ -146,6 +157,9 @@
 		E50F9AE021D23DE000668187 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
+				E52B056721DC92E1002B5032 /* Resource */,
+				E52B057321DC9308002B5032 /* BJWKWebViewViewController.h */,
+				E52B057421DC9308002B5032 /* BJWKWebViewViewController.m */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -166,6 +180,41 @@
 			children = (
 			);
 			path = WKWebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		E52B056721DC92E1002B5032 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E52B056821DC92E1002B5032 /* index.html */,
+				E52B056921DC92E1002B5032 /* css */,
+				E52B056B21DC92E1002B5032 /* js */,
+				E52B056D21DC92E1002B5032 /* img */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E52B056921DC92E1002B5032 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				E52B056A21DC92E1002B5032 /* index.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		E52B056B21DC92E1002B5032 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				E52B056C21DC92E1002B5032 /* index.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		E52B056D21DC92E1002B5032 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E52B056E21DC92E1002B5032 /* knowledge_icon.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 		E5A0B4211E6E8D6400ECFFF1 = {
@@ -259,10 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50F9AF521D23DE000668187 /* testOC.html in Resources */,
+				E52B057221DC92E2002B5032 /* knowledge_icon.png in Resources */,
 				E50F9AF121D23DE000668187 /* ExamApp.html in Resources */,
+				E52B057021DC92E2002B5032 /* index.css in Resources */,
+				E52B057121DC92E2002B5032 /* index.js in Resources */,
 				E50F9AF721D23DE000668187 /* myWebView.html in Resources */,
 				E50F9AFC21D23DE000668187 /* Main.storyboard in Resources */,
 				E50F9AFD21D23DE000668187 /* vendor.js in Resources */,
+				E52B056F21DC92E2002B5032 /* index.html in Resources */,
 				E50F9AF321D23DE000668187 /* ExampleApp.html in Resources */,
 				E50F9AFB21D23DE000668187 /* LaunchScreen.storyboard in Resources */,
 				E50F9AF921D23DE000668187 /* Assets.xcassets in Resources */,
@@ -306,6 +359,7 @@
 				E50F9AFA21D23DE000668187 /* ViewController.m in Sources */,
 				E50F9AF821D23DE000668187 /* BJWebViewController.m in Sources */,
 				E50F9B0221D23DE000668187 /* BJWVViewController.m in Sources */,
+				E52B057521DC9308002B5032 /* BJWKWebViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
