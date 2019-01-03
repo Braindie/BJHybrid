@@ -11,6 +11,7 @@
 #import "WebViewJavascriptBridgeViewController.h"
 #import "BJWVViewController.h"
 #import "BJWKWebViewViewController.h"
+#import "BJHybrid-Swift.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -87,6 +88,9 @@
 
         
     }else if (indexPath.row == 5){
+        // Swift文件
+        WKWebViewController *vc = [WKWebViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
 
     }
 }

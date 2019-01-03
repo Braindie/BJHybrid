@@ -1,0 +1,6 @@
+module Pods_BJHybrid {
+  umbrella header "Pods-BJHybrid-umbrella.h"
+
+  export *
+  module * { export * }
+}

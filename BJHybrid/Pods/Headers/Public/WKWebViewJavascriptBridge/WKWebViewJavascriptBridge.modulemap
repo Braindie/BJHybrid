@@ -1,0 +1,6 @@
+module WKWebViewJavascriptBridge {
+  umbrella header "WKWebViewJavascriptBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}
