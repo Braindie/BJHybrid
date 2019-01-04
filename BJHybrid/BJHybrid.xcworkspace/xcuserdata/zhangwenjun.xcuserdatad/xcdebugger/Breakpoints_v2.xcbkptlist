@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BJHybrid/WKWebViewJavascriptBridge/WKWebViewController.swift"
-            timestampString = "568204977.028463"
+            timestampString = "568268475.3600301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "callHandler()"
             landmarkType = "7">
          </BreakpointContent>

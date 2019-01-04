@@ -10,6 +10,8 @@
 
 > [中文介绍](https://github.com/Lision/WKWebViewJavascriptBridge/blob/master/README_ZH-CN.md)
 
+> This project is inspired by [WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)!
+
 # What Can WKWebViewJavascriptBridge Do?
 
 You can write hybrid moudles in just a few lines of code by use WKWebViewJavascriptBridge without need to be concerned with the underlying messaging implementation.
@@ -32,7 +34,7 @@ The reason for the iOS platform cross-domain access vulnerability is due to UIWe
 
 # Features
 
-- **Swift Support:** Swift 3.2 ~ 4 Support.
+- **Swift Support:** Swift 3.2 ~ 4.2 Support.
 - **High Performance:** The messaging performance is higher than intercept requests.
 - **High Speed:** No need to consider alert box safety timeout.
 - **Lightwight:** This framework contains only 3 files.
@@ -90,13 +92,13 @@ setupWKWebViewJavascriptBridge(function(bridge) {
 
 ### Cocoapods
 
-1. Add `pod 'WKWebViewJavascriptBridge', '~> 1.0.1'` to your Podfile.
+1. Add `pod 'WKWebViewJavascriptBridge', '~> 1.1.0'` to your Podfile.
 2. Run `pod install` or `pod update`.
 3. Add `import WKWebViewJavascriptBridge`.
 
 ### Carthage
 
-1. Add `github "Lision/WKWebViewJavascriptBridge" ~> 1.0.1` to your Cartfile.
+1. Add `github "Lision/WKWebViewJavascriptBridge" ~> 1.1.0` to your Cartfile.
 2. Run `carthage update --platform ios`.
 3. Add the `WKWebViewJavascriptBridge` framework to your project.
 
