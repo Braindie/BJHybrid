@@ -9,7 +9,7 @@
     	<input type="text" id="text1" value=""/>
 	</p>
 	<p>
-    	<input type="button" id="enter" value="调用iOS的方法给输入框赋值" onclick="testClick();"/>
+    	<input type="button" id="enter" value="从OC获取数据并更新" onclick="testClick();"/>
 	</p>	
 
 	<script>
@@ -41,11 +41,10 @@
         //处理 oc 调用 js
 		bridge.registerHandler('loginAction', function(data, responseCallback) {
             //处理oc给的传参
-            alert('确定要删除吗?')
             document.getElementById('text1').value = data
 
             //处理完，回调传值给oc
-            var responseData = '删除成功'
+            var responseData = '赋值成功'
 			responseCallback(responseData)
 		})
 	})

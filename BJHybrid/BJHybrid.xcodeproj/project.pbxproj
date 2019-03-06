@@ -35,6 +35,7 @@
 		E5A0B44E1E6E8EEE00ECFFF1 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A0B44D1E6E8EEE00ECFFF1 /* JavaScriptCore.framework */; };
 		E5BA2C7C21DE057500BC4CBC /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BA2C7B21DE057500BC4CBC /* WKWebViewController.swift */; };
 		E5BA2C7E21DE0BA200BC4CBC /* Demo.html in Resources */ = {isa = PBXBuildFile; fileRef = E5BA2C7D21DE0BA200BC4CBC /* Demo.html */; };
+		E5CB082C222FCA04003FD486 /* BJWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB082B222FCA04003FD486 /* BJWKWebViewController.m */; };
 		E5DB8A921F7362C400520138 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DB8A911F7362C400520138 /* QuickLook.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		E5BA2C7A21DE057500BC4CBC /* BJHybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BJHybrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		E5BA2C7B21DE057500BC4CBC /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		E5BA2C7D21DE0BA200BC4CBC /* Demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Demo.html; sourceTree = "<group>"; };
+		E5CB082A222FCA04003FD486 /* BJWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJWKWebViewController.h; sourceTree = "<group>"; };
+		E5CB082B222FCA04003FD486 /* BJWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJWKWebViewController.m; sourceTree = "<group>"; };
 		E5DB8A911F7362C400520138 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		FF114C2E6AFC469333AF0C63 /* Pods-BJJSPatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,15 +118,16 @@
 		E50F9ACD21D23DE000668187 /* BJHybrid */ = {
 			isa = PBXGroup;
 			children = (
+				E50F9ACE21D23DE000668187 /* AppDelegate.h */,
+				E50F9AE721D23DE000668187 /* AppDelegate.m */,
+				E50F9AEF21D23DE000668187 /* ViewController.h */,
+				E50F9ADF21D23DE000668187 /* ViewController.m */,
 				E50F9AE921D23DE000668187 /* NSURLProtocol */,
 				E50F9AD721D23DE000668187 /* JavaScriptCore&UIWebView */,
 				E50F9AD021D23DE000668187 /* WebViewJavascriptBridge */,
 				E50F9AE021D23DE000668187 /* WKWebView */,
 				E50F9AEE21D23DE000668187 /* WKWebViewJavascriptBridge */,
-				E50F9ACE21D23DE000668187 /* AppDelegate.h */,
-				E50F9AE721D23DE000668187 /* AppDelegate.m */,
-				E50F9AEF21D23DE000668187 /* ViewController.h */,
-				E50F9ADF21D23DE000668187 /* ViewController.m */,
+				E5CB0829222FC9C5003FD486 /* BJWKWebView */,
 				E50F9ADE21D23DE000668187 /* Assets.xcassets */,
 				E50F9AE121D23DE000668187 /* LaunchScreen.storyboard */,
 				E50F9AE321D23DE000668187 /* Main.storyboard */,
@@ -136,12 +140,12 @@
 		E50F9AD021D23DE000668187 /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				E50F9AD121D23DE000668187 /* ExamApp.html */,
 				E50F9AD321D23DE000668187 /* ExampleApp.html */,
-				E50F9AD421D23DE000668187 /* test.html */,
-				E50F9AD621D23DE000668187 /* testOC.html */,
 				E50F9AD521D23DE000668187 /* WebViewJavascriptBridgeViewController.h */,
 				E50F9AD221D23DE000668187 /* WebViewJavascriptBridgeViewController.m */,
+				E50F9AD121D23DE000668187 /* ExamApp.html */,
+				E50F9AD421D23DE000668187 /* test.html */,
+				E50F9AD621D23DE000668187 /* testOC.html */,
 			);
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
@@ -253,6 +257,15 @@
 				5042F7A688EE4B7237071E8F /* libPods-BJHybrid.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5CB0829222FC9C5003FD486 /* BJWKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E5CB082A222FCA04003FD486 /* BJWKWebViewController.h */,
+				E5CB082B222FCA04003FD486 /* BJWKWebViewController.m */,
+			);
+			path = BJWKWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +384,7 @@
 				E50F9AF821D23DE000668187 /* BJWebViewController.m in Sources */,
 				E50F9B0221D23DE000668187 /* BJWVViewController.m in Sources */,
 				E52B057521DC9308002B5032 /* BJWKWebViewViewController.m in Sources */,
+				E5CB082C222FCA04003FD486 /* BJWKWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

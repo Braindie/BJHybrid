@@ -13,6 +13,8 @@
 #import "BJWKWebViewViewController.h"
 #import "BJHybrid-Swift.h"
 
+#import "BJWKWebViewController.h"
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -32,7 +34,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -45,25 +47,23 @@
         cell.textLabel.text = @"NSURLProtocol";
 
     }else if (indexPath.row == 2){
-        cell.textLabel.text = @"JavaScriptCore与UIWebView";
+        cell.textLabel.text = @"UIWebView（JavaScriptCore）";
 
     }else if (indexPath.row == 3){
-        cell.textLabel.text = @"WebViewJavascriptBridge";
+        cell.textLabel.text = @"UIWebView（WebViewJavascriptBridge）";
 
     }else if (indexPath.row == 4){
-        cell.textLabel.text = @"WKWebView";
+        cell.textLabel.text = @"WKWebView（自带交互API)";
         
     }else if (indexPath.row == 5){
-        cell.textLabel.text = @"WKWebViewJavascriptBridge";
+        cell.textLabel.text = @"WKWebView（WKWebViewJavascriptBridge）";
+
+    }else if (indexPath.row == 6){
+        cell.textLabel.text = @"WKWebView";
         
     }
     return cell;
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
-}
-
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -92,6 +92,9 @@
         WKWebViewController *vc = [WKWebViewController new];
         [self.navigationController pushViewController:vc animated:YES];
 
+    }else if (indexPath.row == 6){
+        BJWKWebViewController *vc = [[BJWKWebViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

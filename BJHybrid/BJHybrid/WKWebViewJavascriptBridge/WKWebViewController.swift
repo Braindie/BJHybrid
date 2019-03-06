@@ -8,7 +8,6 @@
 
 import Foundation
 import WebKit
-import WebKit
 import WKWebViewJavascriptBridge
 
 class WKWebViewController : UIViewController {
@@ -48,7 +47,7 @@ class WKWebViewController : UIViewController {
     
  
     
-    /// configData
+    // configData
     func configData(){
         
         let pagePath = Bundle.main.path(forResource: "Demo", ofType: "html")
@@ -66,8 +65,6 @@ class WKWebViewController : UIViewController {
             print("testJavascriptHandler responded: \(String(describing: response))")
         }
     }
-    
-    
 }
 
 
