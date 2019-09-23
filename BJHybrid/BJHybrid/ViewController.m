@@ -53,7 +53,7 @@
         cell.textLabel.text = @"UIWebView（WebViewJavascriptBridge）";
 
     }else if (indexPath.row == 4){
-        cell.textLabel.text = @"WKWebView（自带交互API)";
+        cell.textLabel.text = @"WKWebView（WebKit)";
         
     }else if (indexPath.row == 5){
         cell.textLabel.text = @"WKWebView（WKWebViewJavascriptBridge）";

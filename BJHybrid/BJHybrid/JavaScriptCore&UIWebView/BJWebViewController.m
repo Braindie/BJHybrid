@@ -37,21 +37,47 @@
     
     
     
-    _myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
     _myWebView.delegate = self;
     
     [self.view addSubview:_myWebView];
     
     
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"myWebView"
-                                                          ofType:@"html"];
-    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
-                                                    encoding:NSUTF8StringEncoding
-                                                       error:nil];
-    [_myWebView loadHTMLString:htmlCont baseURL:baseURL];
+//    NSString *path = [[NSBundle mainBundle] bundlePath];
+//    NSURL *baseURL = [NSURL fileURLWithPath:path];
+//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"myWebView"
+//                                                          ofType:@"html"];
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
+//                                                    encoding:NSUTF8StringEncoding
+//                                                       error:nil];
+//    [_myWebView loadHTMLString:htmlCont baseURL:baseURL];
     
+    NSURL *baseUrl = [NSURL URLWithString:@"https://entu.alta.elenet.me"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:baseUrl];
+    
+    
+    NSArray *cookies =[[NSUserDefaults standardUserDefaults]  objectForKey:@"cookies"];
+    
+    if (cookies.count >0) {
+        
+        NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+        
+        [cookieProperties setObject:[cookies objectAtIndex:0] forKey:NSHTTPCookieName];
+        
+        [cookieProperties setObject:[cookies objectAtIndex:1] forKey:NSHTTPCookieValue];
+        
+        [cookieProperties setObject:[cookies objectAtIndex:3] forKey:NSHTTPCookieDomain];
+        
+        [cookieProperties setObject:[cookies objectAtIndex:4] forKey:NSHTTPCookiePath];
+        
+        NSHTTPCookie *cookieuser = [NSHTTPCookie cookieWithProperties:cookieProperties];
+        
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage]  setCookie:cookieuser];
+        
+    }
+    
+    
+    [_myWebView loadRequest:request];
     
 //    [_myWebView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"CallBackFunction();"]];
 //    NSString *str1 = @"acousticInteractionInitFun";
@@ -64,12 +90,35 @@
 
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.jsContext[@"WTK"] = self;
-    self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *ex){
-        context.exception = ex;
-        NSLog(@"异常信息%@",ex);
-    };
+//    self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+//    self.jsContext[@"WTK"] = self;
+//    self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *ex){
+//        context.exception = ex;
+//        NSLog(@"异常信息%@",ex);
+//    };
+    NSArray *nCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
+    
+    for (NSHTTPCookie *cookie in nCookies){
+        
+        if ([cookie isKindOfClass:[NSHTTPCookie class]]){
+            
+            if ([cookie.name isEqualToString:@"STARGATE_ACCESS_TOKEN"]) {
+                
+                NSNumber *sessionOnly =[NSNumber numberWithBool:cookie.sessionOnly];
+                
+                NSNumber *isSecure = [NSNumber numberWithBool:cookie.isSecure];
+                
+                NSArray *cookies = [NSArray arrayWithObjects:cookie.name, cookie.value, sessionOnly, cookie.domain, cookie.path, isSecure, nil];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:cookies forKey:@"cookies"];
+                
+                break;
+                
+            }
+            
+        }
+        
+    }
 }
 
 #pragma mark - JSObjDelegate
