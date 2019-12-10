@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		63D8A8289F9FA89158A32043 /* libPods-BJHybrid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5042F7A688EE4B7237071E8F /* libPods-BJHybrid.a */; };
-		E50F9AF621D23DE000668187 /* BJjsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E50F9AD921D23DE000668187 /* BJjsContext.m */; };
 		E50F9AF721D23DE000668187 /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E50F9ADB21D23DE000668187 /* myWebView.html */; };
 		E50F9AF821D23DE000668187 /* BJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50F9ADC21D23DE000668187 /* BJWebViewController.m */; };
 		E50F9AF921D23DE000668187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50F9ADE21D23DE000668187 /* Assets.xcassets */; };
@@ -46,11 +45,9 @@
 		A077312D58DD7AAD548D734E /* Pods-BJJSPatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.debug.xcconfig"; sourceTree = "<group>"; };
 		E50F9ACE21D23DE000668187 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E50F9AD821D23DE000668187 /* BJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWebViewController.h; sourceTree = "<group>"; };
-		E50F9AD921D23DE000668187 /* BJjsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJjsContext.m; sourceTree = "<group>"; };
 		E50F9ADA21D23DE000668187 /* JSObjDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjDelegate.h; sourceTree = "<group>"; };
 		E50F9ADB21D23DE000668187 /* myWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myWebView.html; sourceTree = "<group>"; };
 		E50F9ADC21D23DE000668187 /* BJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJWebViewController.m; sourceTree = "<group>"; };
-		E50F9ADD21D23DE000668187 /* BJjsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJjsContext.h; sourceTree = "<group>"; };
 		E50F9ADE21D23DE000668187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E50F9ADF21D23DE000668187 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E50F9AE221D23DE000668187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,8 +140,6 @@
 				E50F9ADB21D23DE000668187 /* myWebView.html */,
 				E50F9AD821D23DE000668187 /* BJWebViewController.h */,
 				E50F9ADC21D23DE000668187 /* BJWebViewController.m */,
-				E50F9ADD21D23DE000668187 /* BJjsContext.h */,
-				E50F9AD921D23DE000668187 /* BJjsContext.m */,
 				E50F9ADA21D23DE000668187 /* JSObjDelegate.h */,
 			);
 			path = "JavaScriptCore&UIWebView";
@@ -377,7 +372,6 @@
 			files = (
 				E50F9AFE21D23DE000668187 /* main.m in Sources */,
 				E50F9B0121D23DE000668187 /* BJURLProtocol.m in Sources */,
-				E50F9AF621D23DE000668187 /* BJjsContext.m in Sources */,
 				E50F9AFF21D23DE000668187 /* AppDelegate.m in Sources */,
 				E5BA2C7C21DE057500BC4CBC /* WKWebViewController.swift in Sources */,
 				E50F9AFA21D23DE000668187 /* ViewController.m in Sources */,
