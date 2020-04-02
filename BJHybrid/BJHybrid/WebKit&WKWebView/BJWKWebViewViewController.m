@@ -34,12 +34,13 @@
     return _wkWebView;
 }
 
+#pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     UIButton *rightBtn = [[UIButton alloc] init];
     rightBtn.frame = CGRectMake(0, 0, 60, 20);
-    [rightBtn setTitle:@"OC->JS" forState:UIControlStateNormal];
+    [rightBtn setTitle:@"点我" forState:UIControlStateNormal];
     rightBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [rightBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(rightBtnAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -48,10 +49,12 @@
     
     
     [self.view addSubview:self.wkWebView];
+    
     //JS调用OC的实现
-    //为userContentController添加ScriptMessageHandler，OC与JS约定好name
     //会导致循环引用
-    [self.wkWebView.configuration.userContentController addScriptMessageHandler:self name:@"currentCookies"];
+    
+    //约定接收消息的对象，OC与JS约定好name
+    [self.wkWebView.configuration.userContentController addScriptMessageHandler:self name:@"bj"];
 }
 
 - (void)dealloc
@@ -59,37 +62,35 @@
     NSLog(@"销毁了");
 }
 
-#pragma mark
-//OC->JS
+#pragma mark - methods
 - (void)rightBtnAction:(UIButton *)sender{
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        //OC调用JS的实现
-        [self.wkWebView evaluateJavaScript:@"alertAction('OCmassage')" completionHandler:^(id response, NSError *error) {
+        NSInteger x = arc4random();
+        NSString *str = [NSString stringWithFormat:@"alertAction('%ld')", x];
+        //OC->JS
+        [self.wkWebView evaluateJavaScript:str completionHandler:^(id response, NSError *error) {
+            // 回调
             NSLog(@"response == %@",response);
         }];
     });
 }
 
 #pragma mark - WKScriptMessageHandler
-//JS->OC（OC调用JS后的回调也在这里面）
+//JS->OC
+//回调
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     
-    if ([message.name isEqualToString:@"currentCookies"]) {
+    if ([message.name isEqualToString:@"bj"]) {
         NSString *cookiesStr = [NSString stringWithFormat:@"%@",message.body];
         NSLog(@"当前的cookie为： %@", cookiesStr);
         
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"我是OC提示框" message:cookiesStr preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:cookiesStr preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
-
-
-
-
-
 
 @end
