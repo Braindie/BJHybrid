@@ -22,20 +22,17 @@
     
     //初始化
 //    [JSPatch startWithAppKey:@"882c2b9e8228cad2"];
-//    
 //    //用来检测回调的状态，是更新或者是执行脚本之类的，相关信息，会打印在控制台。
 //    [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
 //        
 //    }];
-//    
 //    [JSPatch setupDevelopment];
 //    [JSPatch sync];
     
+    
+    // 拦截
 //    [NSURLProtocol registerClass:[BJURLProtocol class]];
-    
-    
-    
-    
+
     return YES;
 }
 

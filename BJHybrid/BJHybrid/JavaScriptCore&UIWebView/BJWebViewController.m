@@ -38,9 +38,9 @@
     [self.view addSubview:_myWebView];
  
     
-    [self loadLocalHTML];
+//    [self loadLocalHTML];
     
-//    [self loadOriginHTML];
+    [self loadOriginHTML];
     
 //    [self useStringByEvaluatingJavaScriptFromString];
 
@@ -62,7 +62,12 @@
 
 #pragma mark - 加载远程HTML
 - (void)loadOriginHTML {
-        NSURL *baseUrl = [NSURL URLWithString:@"https://entu.alta.elenet.me"];
+//    NSURL *baseUrl = [NSURL URLWithString:@"https://entu.alta.elenet.me"];
+    
+    NSString *urlStr = @"http://localhost:8080/#/";
+    [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURL *baseUrl = [NSURL URLWithString:urlStr];
+
 //    NSURL *baseUrl = [NSURL URLWithString:@"https://m.xiaobu121.com/xbtest3/app/app/introDetail?tid=t5a03fd1d540eb37637"];
     NSURLRequest *request = [NSURLRequest requestWithURL:baseUrl];
     

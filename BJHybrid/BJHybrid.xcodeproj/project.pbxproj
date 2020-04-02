@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63D8A8289F9FA89158A32043 /* libPods-BJHybrid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5042F7A688EE4B7237071E8F /* libPods-BJHybrid.a */; };
+		A41119742435D14800C0386C /* BJUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41119732435D14800C0386C /* BJUIWebViewController.m */; };
 		E50F9AF721D23DE000668187 /* myWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E50F9ADB21D23DE000668187 /* myWebView.html */; };
 		E50F9AF821D23DE000668187 /* BJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50F9ADC21D23DE000668187 /* BJWebViewController.m */; };
 		E50F9AF921D23DE000668187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50F9ADE21D23DE000668187 /* Assets.xcassets */; };
@@ -43,6 +44,8 @@
 		5042F7A688EE4B7237071E8F /* libPods-BJHybrid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BJHybrid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EC9756188E55DED487A129 /* Pods-BJHybrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJHybrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJHybrid/Pods-BJHybrid.debug.xcconfig"; sourceTree = "<group>"; };
 		A077312D58DD7AAD548D734E /* Pods-BJJSPatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJJSPatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BJJSPatch/Pods-BJJSPatch.debug.xcconfig"; sourceTree = "<group>"; };
+		A41119722435D14800C0386C /* BJUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJUIWebViewController.h; sourceTree = "<group>"; };
+		A41119732435D14800C0386C /* BJUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJUIWebViewController.m; sourceTree = "<group>"; };
 		E50F9ACE21D23DE000668187 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E50F9AD821D23DE000668187 /* BJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJWebViewController.h; sourceTree = "<group>"; };
 		E50F9ADA21D23DE000668187 /* JSObjDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +115,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A41119712435CFDD00C0386C /* BJUIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				A41119722435D14800C0386C /* BJUIWebViewController.h */,
+				A41119732435D14800C0386C /* BJUIWebViewController.m */,
+			);
+			path = BJUIWebView;
+			sourceTree = "<group>";
+		};
 		E50F9ACD21D23DE000668187 /* BJHybrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,11 +132,12 @@
 				E50F9AEF21D23DE000668187 /* ViewController.h */,
 				E50F9ADF21D23DE000668187 /* ViewController.m */,
 				E50F9AE921D23DE000668187 /* NSURLProtocol */,
+				A41119712435CFDD00C0386C /* BJUIWebView */,
 				E50F9AD721D23DE000668187 /* JavaScriptCore&UIWebView */,
 				E5A9AC6D2338C0B000B1D6A6 /* UIWebViewJavascriptBridge */,
-				E50F9AEE21D23DE000668187 /* WKWebViewJavascriptBridge */,
-				E5A9AC5D2338C06800B1D6A6 /* WebKit&WKWebView */,
 				E5CB0829222FC9C5003FD486 /* BJWKWebView */,
+				E5A9AC5D2338C06800B1D6A6 /* WebKit&WKWebView */,
+				E50F9AEE21D23DE000668187 /* WKWebViewJavascriptBridge */,
 				E50F9ADE21D23DE000668187 /* Assets.xcassets */,
 				E50F9AE121D23DE000668187 /* LaunchScreen.storyboard */,
 				E50F9AE321D23DE000668187 /* Main.storyboard */,
@@ -137,10 +150,10 @@
 		E50F9AD721D23DE000668187 /* JavaScriptCore&UIWebView */ = {
 			isa = PBXGroup;
 			children = (
-				E50F9ADB21D23DE000668187 /* myWebView.html */,
 				E50F9AD821D23DE000668187 /* BJWebViewController.h */,
 				E50F9ADC21D23DE000668187 /* BJWebViewController.m */,
 				E50F9ADA21D23DE000668187 /* JSObjDelegate.h */,
+				E50F9ADB21D23DE000668187 /* myWebView.html */,
 			);
 			path = "JavaScriptCore&UIWebView";
 			sourceTree = "<group>";
@@ -149,8 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				E50F9AEA21D23DE000668187 /* BJWVViewController.h */,
-				E50F9AEB21D23DE000668187 /* BJURLProtocol.m */,
 				E50F9AEC21D23DE000668187 /* BJWVViewController.m */,
+				E50F9AEB21D23DE000668187 /* BJURLProtocol.m */,
 				E50F9AED21D23DE000668187 /* BJURLProtocol.h */,
 			);
 			path = NSURLProtocol;
@@ -159,9 +172,9 @@
 		E50F9AEE21D23DE000668187 /* WKWebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				E5BA2C7D21DE0BA200BC4CBC /* Demo.html */,
 				E5BA2C7B21DE057500BC4CBC /* WKWebViewController.swift */,
 				E5BA2C7A21DE057500BC4CBC /* BJHybrid-Bridging-Header.h */,
+				E5BA2C7D21DE0BA200BC4CBC /* Demo.html */,
 			);
 			path = WKWebViewJavascriptBridge;
 			sourceTree = "<group>";
@@ -244,11 +257,11 @@
 		E5A9AC6D2338C0B000B1D6A6 /* UIWebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9AC6E2338C0B000B1D6A6 /* ExamApp.html */,
+				E5A9AC722338C0B000B1D6A6 /* WebViewJavascriptBridgeViewController.h */,
 				E5A9AC6F2338C0B000B1D6A6 /* WebViewJavascriptBridgeViewController.m */,
 				E5A9AC702338C0B000B1D6A6 /* ExampleApp.html */,
 				E5A9AC712338C0B000B1D6A6 /* test.html */,
-				E5A9AC722338C0B000B1D6A6 /* WebViewJavascriptBridgeViewController.h */,
+				E5A9AC6E2338C0B000B1D6A6 /* ExamApp.html */,
 				E5A9AC732338C0B000B1D6A6 /* testOC.html */,
 			);
 			path = UIWebViewJavascriptBridge;
@@ -375,6 +388,7 @@
 				E50F9AFF21D23DE000668187 /* AppDelegate.m in Sources */,
 				E5BA2C7C21DE057500BC4CBC /* WKWebViewController.swift in Sources */,
 				E50F9AFA21D23DE000668187 /* ViewController.m in Sources */,
+				A41119742435D14800C0386C /* BJUIWebViewController.m in Sources */,
 				E5A9AC752338C0B000B1D6A6 /* WebViewJavascriptBridgeViewController.m in Sources */,
 				E50F9AF821D23DE000668187 /* BJWebViewController.m in Sources */,
 				E50F9B0221D23DE000668187 /* BJWVViewController.m in Sources */,
